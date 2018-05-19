@@ -19,14 +19,25 @@ styles, `#sidebar-checkbox` for behavior. -->
   {% for title, href in LINKS %}
   <a class="sidebar-nav-item" href="{{ href }}">{{ title }}</a>
   {% endfor %}
+
+  <div class="sidebar-social">
+  {% for title, href in SOCIAL %}
+  <a class="sidebar-social-item" href="{{ href }}">
+    <img src="{{ SITEURL }}/theme/img/{{ title }}.png" alt="{{ title }}"/>
+  </a>
+  {% endfor %}
+  </div>
   </nav>
 
   <div class="sidebar-item">
     <p>
-    <a href="https://twitter.com/{{ TWITTER_ACCOUNT }}">&copy; @{{ TWITTER_ACCOUNT }}</a> 2017
+    &copy; {{ AUTHOR }} {{ CURRENTYEAR }}
     </p>
     <p class="tiny-note">
-      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+        Made with
+        <a class="muted" href="https://blog.getpelican.com">Pelican</a>
+        and
+        <a class="muted" href="https://github.com/thomaswilley/pelicanyan">Pelicanyan</a>
     </p>
   </div>
 </div>
