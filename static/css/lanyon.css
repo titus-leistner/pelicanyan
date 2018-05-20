@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 */
-.sidebar-nav-item, .sidebar-social {
+.sidebar-nav-item, .sidebar-social, .tipue_search_right {
   display: block;
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
@@ -190,6 +190,22 @@ a.sidebar-nav-item:focus {
   text-decoration: none;
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
+}
+
+.tipue_search_right input {
+    background: rgba(255,255,255,.1) url('../img/search.png') no-repeat;
+    color: #fff; 
+	padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+    box-shadow: none; 
+	outline: 0;
+	margin: 0;
+}
+
+#tipue_search_content div {
+    padding: .25rem 1.5rem;
 }
 
 .sidebar-social::after {

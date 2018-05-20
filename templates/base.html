@@ -107,3 +107,17 @@
      </div>
   </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch({
+            'mode': 'json',
+            'contentLocation': 'tipuesearch_content.json'
+        });
+        if(document.getElementById('tipue_search_input').value) {
+            document.getElementById('sidebar-checkbox').checked = true
+        }
+    });
+</script>
