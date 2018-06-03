@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon"  href="favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="favicon-180x180.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+    <link rel="shortcut icon" type="image/x-icon"  href="{{ SITEURL }}/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ SITEURL }}/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="{{ SITEURL }}/favicon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/favicon-180x180.png">
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
     <meta charset="utf-8" />
@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/syntax.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/lanyon.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css"/>
     {% endblock head %}
   </head>
 
@@ -118,7 +118,7 @@
     $(document).ready(function() {
         $('#tipue_search_input').tipuesearch({
             'mode': 'json',
-            'contentLocation': 'tipuesearch_content.json'
+            'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
         });
         if(document.getElementById('tipue_search_input').value) {
             document.getElementById('sidebar-checkbox').checked = true
