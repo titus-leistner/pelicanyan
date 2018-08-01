@@ -38,11 +38,11 @@
     {% if TAG_FEED_RSS and tag %}
     <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/poole.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/syntax.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/lanyon.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css"/>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css"/>
     {% endblock head %}
   </head>
 
@@ -112,8 +112,8 @@
   </body>
 </html>
 <script src="{{ SITEURL }}/theme/script/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>
+<script src="{{ SITEURL }}/theme/script/tipuesearch-5.0.0.js"></script>
+<script src="{{ SITEURL }}/theme/script/tipuesearch_set-5.0.0.js"></script>
 <script>
     $(document).ready(function() {
         $('#tipue_search_input').tipuesearch({
